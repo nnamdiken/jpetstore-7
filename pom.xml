@@ -320,6 +320,17 @@
     <project.build.outputTimestamp>1670877034</project.build.outputTimestamp>
   </properties>
 
+        <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <url>http://13.235.33.220:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>http://13.235.33.220:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
   <profiles>
     <!-- Profiles for Application Server -->
     <profile>
