@@ -229,24 +229,23 @@
           </configuration>
         </plugin>
         <plugin>
-          <groupId>org.codehaus.cargo</groupId>
-          <artifactId>cargo-maven3-plugin</artifactId>
-          <version>${cargo-maven3-plugin.version}</version>
-          <configuration>
-            <container>
-              <containerId>${cargo.maven.containerId}</containerId>
-              <zipUrlInstaller>
-                <url>${cargo.maven.containerUrl}</url>
-              </zipUrlInstaller>
-            </container>
-            <daemon>
-              <properties>
-                <cargo.daemon.url>http://localhost:18000</cargo.daemon.url>
-                <cargo.daemon.handleid>${project.artifactId}</cargo.daemon.handleid>
-              </properties>
-            </daemon>
-          </configuration>
-        </plugin>
+    <groupId>org.codehaus.cargo</groupId>
+    <artifactId>cargo-maven3-plugin</artifactId>
+    <version>1.10.9</version>
+    <configuration>
+        <container>
+            <containerId>tomcat9x</containerId>
+            <type>installed</type>
+            <home>/path/to/tomcat</home>
+        </container>
+        <configuration>
+            <type>standalone</type>
+            <properties>
+                <cargo.servlet.port>8081</cargo.servlet.port>
+            </properties>
+        </configuration>
+    </configuration>
+</plugin>
       </plugins>
     </pluginManagement>
     <plugins>
